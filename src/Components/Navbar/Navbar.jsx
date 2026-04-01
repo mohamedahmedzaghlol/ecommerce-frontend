@@ -7,7 +7,7 @@ export default function Navbar() {
   return (
     <>
       <nav className="bg-slate-300">
-        <div className="flex flex-wrap justify-between items-center mx-auto max-w-screen-xl p-4">
+        <div className="flex flex-wrap justify-center gap-3 lg:justify-between items-center mx-auto max-w-screen-xl p-4">
           <div className="flex items-center gap-5">
             <Link
               to=""
@@ -30,18 +30,18 @@ export default function Navbar() {
           </div>
 
           <div className="flex items-center space-x-6 rtl:space-x-reverse">
-            <a
-              href="tel:5541251234"
-              className="text-sm  text-body hover:underline"
-            >
-              (555) 412-1234
-            </a>
-            <a
-              href="#"
-              className="text-sm font-medium text-fg-brand hover:underline"
-            >
-              Login
-            </a>
+            <ul className="flex gap-4">
+              <li><i className="fab fa-facebook"></i></li>
+              <li><i className="fab fa-youtube"></i></li>
+              <li><i className="fab fa-instagram"></i></li>
+              <li><i className="fab fa-linkedin"></i></li>
+              <li><i className="fab fa-twitter"></i></li>
+            </ul>
+            <ul className="flex gap-4">
+              <li><Link to="login">Login</Link></li>
+              <li><Link to="register">Register</Link></li>
+              <li><span>Signout</span></li>
+            </ul>
           </div>
         </div>
       </nav>
