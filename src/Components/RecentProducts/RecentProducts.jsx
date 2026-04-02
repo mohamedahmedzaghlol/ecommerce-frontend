@@ -1,16 +1,15 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 
-export default function RecentProducts() {
-  // 1. بنعرف المكان اللي هنخزن فيه المنتجات (State)
+export default function RecentProducts() { 
+
   const [products, setProducts] = useState([]);
 
-  // 2. الفانكشن اللي بتجيب البيانات من السيرفر
+  
   function getProducts() {
     axios
       .get(`http://localhost:3000/api/v1/products`)
       .then((res) => {
-        // بنحط البيانات اللي جت في الـ State
         setProducts(res.data.data);
       })
       .catch((err) => {
@@ -18,7 +17,7 @@ export default function RecentProducts() {
       });
   }
 
-  // 3. بنشغل الفانكشن أول ما الصفحة تفتح
+  
   useEffect(() => {
     getProducts();
   }, []);
@@ -30,13 +29,13 @@ export default function RecentProducts() {
       </h1>
 
       <div className="flex flex-wrap -m-4">
-        {/* 4. بنلف على كل منتج ونرسم الكارت بتاعه */}
+        
         {products.map((product) => (
           <div key={product._id} className="lg:w-1/4 md:w-1/2 p-4 w-full">
             <div className="border border-gray-200 p-4 rounded-xl shadow-sm hover:shadow-md transition-all h-full flex flex-col justify-between">
-              {/* هنا التعديل بتاع الصورة الاحتياطية */}
+              
               <img
-                // بدل ما نبعت اللينك البايظ، هنبعت الصورة الـ Static علطول لغاية ما تخلص الـ Multer
+                // بدل ما نبعت اللينك البايظ، هنبعت الصورة الـ Static علطول لغاية ما أخلص الـ Multer
                 src="https://placehold.co/400x400?text=Product+Image"
                 className="w-full h-[200px] object-contain rounded-lg"
                 alt={product.title}
