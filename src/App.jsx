@@ -9,6 +9,7 @@ import Categories from "./Components/Categories/Categories";
 import Register from "./Components/Register/Register";
 import Login from "./Components/Login/Login";
 import Notfound from "./Components/Notfound/Notfound";
+import RecentProducts from "./Components/RecentProducts/RecentProducts";
 
 let routes = createBrowserRouter([
   {
@@ -17,7 +18,7 @@ let routes = createBrowserRouter([
     children: [
       { index: true, element: <Home /> },
       { path: "home", element: <Home /> },
-      { path: "products", element: <Products /> },
+      { path: "products", element: <RecentProducts/> },
       { path: "cart", element: <Cart /> },
       { path: "brands", element: <Brands /> },
       { path: "categories", element: <Categories /> },

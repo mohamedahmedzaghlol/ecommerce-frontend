@@ -1,36 +1,64 @@
-# React + Vite
+🛒 E-Commerce Full Stack Project (MERN)
+This is a dynamic E-commerce application built using the MERN stack. The project features a robust backend, a responsive frontend, and seamless data integration.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+🚀 Recent Updates
+Backend Integration: Successfully connected the React frontend with the Node.js/Express API.
 
-Currently, two official plugins are available:
+Dynamic Data: Products are now fetched dynamically from MongoDB and displayed using advanced React hooks (useState, useEffect).
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+Image Fallback: Implemented a smart error-handling system for product images to ensure a consistent UI.
 
-## React Compiler
+🛠️ Tech Stack
+Frontend: React.js, Tailwind CSS, Axios, React Router Dom.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+Backend: Node.js, Express.js.
 
-## Expanding the ESLint configuration
+Database: MongoDB & Mongoose.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+Tooling: Vite, generate-react-cli, Postman.
 
+🏗️ Project Structure
+This project follows a modular structure for scalability, managed by generate-react-cli.
 
-## 🛠️ Project Structure & Component Generation
+Key Directories:
+src/Components/: Contains all reusable UI components and pages.
 
-This project uses `generate-react-cli` to maintain a consistent component structure. 
+src/Context/: (Upcoming) For global state management (Cart, User Auth).
 
-### Component Setup:
-- **Location:** All components are generated in `src/Components/`.
-- **Style:** Each component includes a scoped `CSS Module` for specific styling.
-- **Vite-Friendly:** Configured to work seamlessly with React and Vite.
+Styling: Every component is paired with a CSS Module for scoped, conflict-free styles.
 
-### Generated Components:
-The following base components have been initialized:
-- **Core Layout:** `Navbar`, `Footer`, `Layout`, `Notfound`.
-- **Pages:** `Home`, `Products`, `Categories`, `Brands`, `Cart`.
-- **Auth:** `Login`, `Register`.
+Core Components:
+Navigation & Layout: Navbar, Footer, Layout, Notfound.
 
-### Usage:
-To generate a new component, run:
-`npx generate-react-cli component ComponentName`
+Product Management: Home, RecentProducts, Categories, Brands.
+
+User Authentication: Login, Register.
+
+Shopping Experience: Cart.
+
+💻 Technical Workflow (Step-by-Step)
+Client Request: React triggers an API call via Axios on component mount.
+
+Server Logic: The Express server listens for the request and communicates with MongoDB.
+
+Data Response: The server sends back product data in JSON format.
+
+UI Rendering: React updates the state and maps through the data to render product cards dynamically.
+
+🔧 Installation & Setup
+Clone the repo: git clone <your-repo-link>
+
+Install Frontend dependencies: npm install
+
+Run Frontend: npm run dev
+
+Ensure Backend is running on http://localhost:3000.
+
+🔜 Roadmap
+[ ] Implement JWT Authentication.
+
+[ ] Add Shopping Cart functionality.
+
+[ ] Integrate a payment gateway.
+
+[ ] Advanced Product Search & Filtering.
